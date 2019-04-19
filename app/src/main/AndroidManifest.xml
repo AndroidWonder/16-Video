@@ -13,6 +13,7 @@
          <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-  </application> 
-     <uses-sdk android:minSdkVersion="17" />
+  </application>
+
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

@@ -10,6 +10,7 @@
 package com.course.example;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.VideoView;
 import android.widget.MediaController;
@@ -28,10 +29,7 @@ public class Video extends Activity {
 
 		video = (VideoView) findViewById(R.id.video);
 
-		// Load the movie
-		//video.setVideoPath("/data/data/test.3gp");
-		video.setVideoPath("/data/data/samplevideo.3gp");
-		
+
 		//set completion listener
 		video.setOnCompletionListener(new OnCompletionListener() {
 			public void onCompletion(MediaPlayer mp) {
@@ -43,9 +41,12 @@ public class Video extends Activity {
 		//create media controller for video
 		MediaController mc = new MediaController(this);
 		mc.setMediaPlayer(video);
-
 		video.setMediaController(mc);
-		video.requestFocus();
+
+		//load the video
+		String path = getFilesDir().toString() + "/samplevideo.3gp"  ;
+		Uri videoUri = Uri.parse(path);
+		video.setVideoURI(videoUri);
 
 		mc.show();
 
