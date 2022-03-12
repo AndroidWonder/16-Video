@@ -1,11 +1,7 @@
 /* 
  * A video file needs to be pushed into a file.
- * Go into DDSM Perspective, File Explorer, push/pull buttons for memory.
- * Use Emulator from DOS Command Line to push/pull file.
  * This example uses a MediaController to start and stop video.
  * Tap on the VideoView to make controller visible.
- *
- * Emulator has regressions at API 24 and 25. Use API 23.
  */
 package com.course.example;
 
