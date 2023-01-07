@@ -5,7 +5,7 @@
     android:versionName="1.0">
   <application android:icon="@drawable/icon"
        android:label="@string/app_name">
-    <activity android:name=".Video"
+    <activity android:name=".Video" android:exported="true"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
       <intent-filter>
